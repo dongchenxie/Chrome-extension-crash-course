@@ -1,0 +1,21 @@
+{
+  "name": "Hello, World3!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "http://*/*", "https://*/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "action": {
+    "default_popup":"hello.html"
+  },
+  "options_page": "options.html"
+}
